@@ -42,7 +42,7 @@ The repository is designed to make those failures:
   worked examples.
 - [docs/](./docs/)
   Longer-form method notes and crosswalks, including the AI Incident Database
-  governance crosswalk method and mapping guidance.
+  governance crosswalk method, mapping guidance, and taxonomy inventory.
 - [templates/](./templates/) and [reports/templates/](./reports/templates/)
   Reusable authoring scaffolds for cases, patterns, profiles, and findings
   reports.
@@ -112,6 +112,9 @@ The current anti-pattern catalogue includes, among others:
   non-public supporting basis
 - use [docs/aiid-governance-crosswalk-method.md](./docs/aiid-governance-crosswalk-method.md)
   when mapping public AI incident records into governance interpretations
+- use [docs/aiid-taxonomy-inventory-and-mapping-backlog.md](./docs/aiid-taxonomy-inventory-and-mapping-backlog.md)
+  to track which external taxonomy surfaces are already mapped and which still
+  need deeper governance work
 
 ### As a deployer or assessor
 

@@ -13,6 +13,9 @@ sit between the top-level taxonomy and the formal `spec/` layer.
 - [aiid-governance-crosswalk-mapping-matrix.md](./aiid-governance-crosswalk-mapping-matrix.md)
   A starter matrix from common incident signals to likely governance
   interpretations and mitigation shapes.
+- [aiid-taxonomy-inventory-and-mapping-backlog.md](./aiid-taxonomy-inventory-and-mapping-backlog.md)
+  An inventory of AIID taxonomy surfaces and an explicit backlog for future
+  governance crosswalk work.
 
 ## Why this layer exists
 
