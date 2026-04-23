@@ -14,3 +14,5 @@ Candidate patterns include:
 - policy as runtime
 - runtime evidence
 - doctrine as coupling layer
+- governance lifecycle validation
+- delegated agent identity

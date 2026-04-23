@@ -49,6 +49,12 @@ The shared idea is useful:
 - `AP009` Human Oversight as Ceremony
 - `AP010` Capability Discovery as Attack Surface
 - `AP011` Rulebook Without Doctrine
+- `AP012` MCP Direct-to-LLM Tool Coupling
+- `AP013` Sandbox Equals Safety
+- `AP014` Validation Freeze, Runtime Drift
+- `AP015` Framework Without Risk Profile
+- `AP016` Governance Without Lifecycle Validation
+- `AP017` Agent Keys as Legal Personhood
 
 ## How to Read an Entry
 

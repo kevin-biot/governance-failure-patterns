@@ -428,3 +428,309 @@ instruments.
 This anti-pattern is weaker when the institution has a stable and explicit
 doctrine that couples separate instruments, ranks trade-offs clearly, and is
 used to assess new policy additions before they accumulate.
+
+---
+
+## AP012. MCP Direct-to-LLM Tool Coupling
+
+**Mechanism**
+
+Tool-capable MCP surfaces are exposed directly to a language model, which then
+interprets when and how to invoke them without a stronger deterministic permit
+or execution-governance layer in between.
+
+The protocol is not the problem by itself. The anti-pattern is allowing the
+stochastic model to function as the practical authority over tool invocation.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+- `F004` Coupled Reasoning Collapse
+
+**Visible signature**
+
+- MCP tools available directly inside the conversational model loop
+- weak separation between tool discovery, tool selection, and tool
+  authorization
+- write-capable or consequential tools callable from the same prompt substrate
+  as narrative reasoning
+- schemas or logs treated as sufficient governance even when no external permit
+  layer exists
+
+**False reassurance pattern**
+
+The system feels governed because tools are structured and calls are logged. In
+practice, the meaningful authority still sits with a stochastic interpreter
+unless a harder runtime layer mediates execution.
+
+**Demotion path**
+
+- interpose deterministic permit checks between model and tool execution
+- separate narrative reasoning from execution authority
+- bind tool calls to typed policy ceilings, principal scope, and parameter
+  constraints outside the model
+- treat MCP as transport and interoperability, not as governance
+
+**Boundaries**
+
+This anti-pattern is weaker when MCP is used behind a deterministic execution
+substrate that can refuse, constrain, or replay tool calls independently of the
+model's narrative reasoning.
+
+---
+
+## AP013. Sandbox Equals Safety
+
+**Mechanism**
+
+An organisation treats sandboxing as if it were a complete governance answer.
+The model or agent is placed inside an isolated environment, and that isolation
+is then used as the main justification for safety, despite the fact that many
+meaningful risks sit outside the sandbox boundary.
+
+The canonical market pattern is:
+
+- "we let the model browse or act, but only in a sandbox"
+- "the sandbox means it is safe"
+
+This narrows one technical surface while leaving other authority, data,
+decision, and governance surfaces weakly controlled.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+- `F004` Coupled Reasoning Collapse
+
+**Visible signature**
+
+- sandboxing described as the primary or sufficient control
+- little distinction between infrastructure isolation and governance control
+- weak treatment of exfiltration, downstream action, or decision authority
+- safety claims anchored to where the code runs rather than what the system is
+  allowed to decide, emit, or trigger
+
+**False reassurance pattern**
+
+The system feels safe because execution is contained. In practice, a sandbox
+often protects the host environment better than it protects the institution,
+the user, or the downstream decision chain.
+
+**Demotion path**
+
+- treat sandboxing as one control, not the governance story
+- map authority, exfiltration, downstream action, and evidence surfaces
+- require explicit execution ceilings and fail-closed behavior outside the
+  sandbox boundary
+- test what harmful outcomes remain possible even when the sandbox works as
+  intended
+
+**Boundaries**
+
+This anti-pattern is weaker when the sandbox is paired with explicit authority
+limits, data-egress controls, independent permit checks, and a clear account of
+what risks the sandbox does and does not mitigate.
+
+---
+
+## AP014. Validation Freeze, Runtime Drift
+
+**Mechanism**
+
+The organisation treats pre-deployment validation as if it were sufficient
+governance for the live system, even though the real workload, context,
+integrations, and user behavior continue to change after release.
+
+The validation artefact stays fixed while the operational system drifts.
+
+**Failure-class linkage**
+
+- `F002` Absorbed Drift and Baseline Laundering
+- `F004` Coupled Reasoning Collapse
+- `F005` Stationarity Fiction in State Models
+
+**Visible signature**
+
+- strong launch-time benchmark or acceptance-test story
+- weak or absent production drift measurement
+- no clear owner for runtime behavior drift under live workload
+- stale validation evidence cited long after the operating conditions changed
+- incident review focused on why the lab test missed the issue rather than why
+  the live system was not being re-measured
+
+**False reassurance pattern**
+
+The system looks governed because it passed testing once. In practice, the
+institution is preserving the memory of assurance rather than the condition of
+assurance.
+
+**Demotion path**
+
+- assign explicit ownership for runtime drift measurement
+- measure behavior under live workload, not just lab prompts or static suites
+- expire validation claims unless refreshed by runtime evidence
+- distinguish launch validation from ongoing operating-envelope validation
+- monitor workload, behavior, tool-use, and policy-compliance drift separately
+
+**Boundaries**
+
+This anti-pattern is weaker when deployment claims have explicit expiry,
+runtime drift is measured continuously or periodically, and operating-envelope
+validation is treated as a standing obligation rather than a launch ceremony.
+
+---
+
+## AP015. Framework Without Risk Profile
+
+**Mechanism**
+
+A governance or safety framework is presented as if it were sufficient on its
+own, but no concrete risk profile is produced for the actual deployed system,
+workflow, or composition.
+
+The framework describes principles, controls, or review processes without
+answering the practical risk questions:
+
+- what authority exists
+- what reach exists
+- what reversibility exists
+- what coupling exists
+- what consequence class exists
+- what happens when components compose
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+
+**Visible signature**
+
+- rich framework language with weak system-specific risk articulation
+- little or no explicit blast-radius or composition analysis
+- controls described in the abstract but not traced to deployment consequence
+- advisory, execution, and hybrid systems discussed with the same governance
+  vocabulary
+
+**False reassurance pattern**
+
+The framework looks mature because it names controls, principles, and review
+steps. In practice, decision-makers still do not know the concrete risk profile
+of the deployed system.
+
+**Demotion path**
+
+- require a system-specific risk profile alongside the framework
+- assess blast radius, composition, and reversibility explicitly
+- make framework claims traceable to the actual deployed authority surface
+- distinguish governance for advisory systems from governance for execution
+  systems
+
+**Boundaries**
+
+This anti-pattern is weaker when the framework requires and publishes a
+concrete, deployment-specific risk profile and composition-aware blast-radius
+assessment rather than relying on generic process descriptions alone.
+
+---
+
+## AP016. Governance Without Lifecycle Validation
+
+**Mechanism**
+
+Governance is asserted as a property of the system, but there is no coherent
+lifecycle that links:
+
+- pre-deployment design validation
+- deployment readiness checks
+- post-deployment operating-envelope monitoring
+- intervention when the live system leaves the validated envelope
+
+The result is governance as slogan rather than governance as an operating
+discipline.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+- `F002` Absorbed Drift and Baseline Laundering
+- `F004` Coupled Reasoning Collapse
+
+**Visible signature**
+
+- design reviews that do not define the runtime governance shape
+- pre-launch testing with no explicit handoff to live monitoring
+- monitoring that is present but not tied back to a validated operating envelope
+- no clear rule for when the live system has left the governance conditions
+  under which it was approved
+
+**False reassurance pattern**
+
+The system looks governed because it passed a design review or validation pack.
+In practice, the institution has no coherent transition from preflight to
+flight-envelope governance.
+
+**Demotion path**
+
+- define governance as a lifecycle, not a launch event
+- require pre-deployment design validation against a named governance shape
+- define a deployment gate that states the validated operating envelope
+- switch after launch to runtime stability and envelope monitoring tied to that
+  pre-deployment validation
+- require intervention rules for leaving the approved envelope
+
+**Boundaries**
+
+This anti-pattern is weaker when the system has an explicit governance
+lifecycle: design validation, deployment gate, runtime envelope monitoring, and
+clear intervention thresholds linked to the validated design assumptions.
+
+---
+
+## AP017. Agent Keys as Legal Personhood
+
+**Mechanism**
+
+An agent is issued its own cryptographic keypair and that technical identity is
+then treated as if it solved the harder governance problem of legal authority,
+delegation, responsibility, and dispute accountability.
+
+The core design mistake is confusing:
+
+- cryptographic identity
+
+with:
+
+- accountable legal identity
+
+In many deployed settings the agent is still acting only as a delegate of a
+human or organisational principal, even if it can sign, authenticate, or
+exchange credentials in its own technical name.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+
+**Visible signature**
+
+- agent-specific keys presented as proof of autonomous accountability
+- weak delegation chain from legal principal to technical agent identity
+- dispute or liability model unclear once the agent has acted
+- technical signatures emphasized more than authority provenance and revocation
+
+**False reassurance pattern**
+
+The system feels mature because each agent has a keypair and can sign or verify
+messages. In practice, cryptographic selfhood is being mistaken for legal
+standing and accountable delegation.
+
+**Demotion path**
+
+- treat agent identity as delegated execution identity, not independent legal
+  personhood
+- bind every agent credential to an accountable principal and delegation scope
+- make revocation, expiry, and authority provenance explicit
+- design dispute evidence so a forum can trace action back to the responsible
+  legal actor rather than stopping at the agent key
+
+**Boundaries**
+
+This anti-pattern is weaker when agent credentials are explicitly framed as
+delegated authority from a legal principal, with clear scope, expiry,
+revocation, and evidentiary traceability to the responsible actor.
