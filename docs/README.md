@@ -16,6 +16,9 @@ sit between the top-level taxonomy and the formal `spec/` layer.
 - [aiid-taxonomy-inventory-and-mapping-backlog.md](./aiid-taxonomy-inventory-and-mapping-backlog.md)
   An inventory of AIID taxonomy surfaces and an explicit backlog for future
   governance crosswalk work.
+- [../evidence/notes/aiid-crosswalk-source-pack.md](../evidence/notes/aiid-crosswalk-source-pack.md)
+  Records the public source basis and evidence boundary for the AIID crosswalk
+  surface.
 
 ## Why this layer exists
 
