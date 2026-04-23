@@ -1,0 +1,169 @@
+{
+  "schema_version": "0.1",
+  "profile_id": "gf-example-runtime-governance-001",
+  "subject": {
+    "name": "Runtime Governance Pattern",
+    "type": "institutional_workflow",
+    "scope_statement": "Illustrative profile for a system with weak runtime governance binding after launch.",
+    "sector": "general"
+  },
+  "assessment": {
+    "date": "2026-04-23",
+    "assessor": "Lane2 private incubation",
+    "status": "draft",
+    "method_version": "0.1"
+  },
+  "layers": {
+    "normative_governance": {
+      "description": "Policies exist but are weakly coupled to runtime control.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "measurement_substrate": {
+      "description": "Runtime monitoring exists but is not clearly tied back to validated design assumptions.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "deliberative_layer": {
+      "description": "Assurance language remains stronger than the runtime control story.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    }
+  },
+  "governance_shape": {
+    "name": "Lifecycle Governance",
+    "summary": "Preflight validation should hand off into runtime envelope monitoring and intervention.",
+    "validated_assumptions": [
+      "Launch validation is not sufficient by itself.",
+      "The operating envelope must remain monitored in production."
+    ],
+    "control_points": [
+      "deployment gate",
+      "runtime drift ownership",
+      "envelope departure intervention"
+    ]
+  },
+  "operating_envelope": {
+    "approved_conditions": [
+      "validated workload assumptions remain in force",
+      "runtime controls remain aligned with design-basis validation"
+    ],
+    "departure_signals": [
+      "live workload differs materially from validation assumptions",
+      "policy PDF no longer maps to runtime behavior"
+    ],
+    "intervention_rules": [
+      "reassess when validation evidence expires",
+      "escalate on out-of-envelope operation"
+    ]
+  },
+  "lifecycle_validation": {
+    "pre_deployment_validated": true,
+    "deployment_gate_defined": false,
+    "runtime_monitoring_defined": false,
+    "out_of_envelope_response_defined": false,
+    "notes": "Illustrative partial lifecycle showing a break after launch."
+  },
+  "risk_profile": {
+    "summary": "Primary risk is governance discontinuity between design-time and runtime.",
+    "authority": {
+      "level": "medium",
+      "notes": "Authority surface depends on deployed actions and overrides."
+    },
+    "reach": {
+      "level": "medium",
+      "notes": "Reach grows with rollout and connected systems."
+    },
+    "reversibility": {
+      "level": "medium",
+      "notes": "Some post-hoc recovery exists, but not without operational cost."
+    },
+    "coupling": {
+      "level": "high",
+      "notes": "Runtime monitoring is disconnected from design-basis governance."
+    },
+    "consequence": {
+      "level": "high",
+      "notes": "Failures can persist under stale assurance claims."
+    },
+    "composition": {
+      "level": "medium",
+      "notes": "Composition amplifies the lifecycle break where multiple systems inherit stale validation."
+    }
+  },
+  "failure_classes": [
+    {
+      "id": "F007",
+      "status": "present"
+    },
+    {
+      "id": "F009",
+      "status": "present"
+    }
+  ],
+  "anti_patterns": [
+    {
+      "id": "AP014",
+      "status": "present",
+      "evidence_level": "mixed",
+      "summary": "Validation evidence remains live after the system has drifted.",
+      "linked_failure_classes": [
+        "F009"
+      ],
+      "tests": [
+        {
+          "test_id": "AP014-T1",
+          "result": "fail",
+          "notes": "No clear owner for runtime drift after launch.",
+          "evidence_level": "mixed"
+        },
+        {
+          "test_id": "AP014-T3",
+          "result": "fail",
+          "notes": "Validation evidence has no explicit expiry.",
+          "evidence_level": "mixed"
+        }
+      ]
+    },
+    {
+      "id": "AP016",
+      "status": "present",
+      "evidence_level": "mixed",
+      "summary": "No coherent handoff from design validation to runtime envelope governance.",
+      "linked_failure_classes": [
+        "F007",
+        "F009"
+      ],
+      "tests": [
+        {
+          "test_id": "AP016-T2",
+          "result": "fail",
+          "notes": "Deployment gate does not specify runtime obligations clearly.",
+          "evidence_level": "mixed"
+        },
+        {
+          "test_id": "AP016-T3",
+          "result": "fail",
+          "notes": "Monitoring is not traceable to the validated design envelope.",
+          "evidence_level": "mixed"
+        }
+      ]
+    }
+  ],
+  "evidence_summary": [
+    {
+      "kind": "monitoring_review",
+      "description": "Runtime monitoring exists but is weakly tied to validated assumptions."
+    },
+    {
+      "kind": "document_review",
+      "description": "Assurance and deployment artefacts do not define clear lifecycle handoff."
+    }
+  ],
+  "residual_risk": [
+    "Stale assurance may continue to govern decision-making after operating conditions have changed."
+  ],
+  "attestation": {
+    "status": "draft"
+  }
+}

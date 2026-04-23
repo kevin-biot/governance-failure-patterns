@@ -16,6 +16,7 @@ The repository needs a way to say:
 - which anti-patterns were tested
 - what the results were
 - what evidence level supports the claim
+- what governance shape and operating envelope were assumed
 
 without pretending to have a full certification regime.
 
@@ -53,6 +54,11 @@ An attestation should contain:
 
 5. **Residual risk statement**
    - what remains unresolved even if the anti-pattern was partly demoted
+
+6. **Lifecycle and validity**
+   - governance shape assessed
+   - operating envelope assumed
+   - attestation expiry
 
 ## Suggested JSON envelope
 

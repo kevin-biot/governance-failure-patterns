@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.1",
+  "profile_id": "gf-example-agent-commerce-001",
+  "subject": {
+    "name": "Registered Agent Commerce Pattern",
+    "type": "case_study",
+    "scope_statement": "Generalized agent-registration and delegated-accountability pattern in agentic commerce and payment settings.",
+    "sector": "payments"
+  },
+  "assessment": {
+    "date": "2026-04-23",
+    "assessor": "Lane2 private incubation",
+    "status": "draft",
+    "method_version": "0.1"
+  },
+  "layers": {
+    "normative_governance": {
+      "description": "Delegated authority and dispute accountability are only partially specified.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "measurement_substrate": {
+      "description": "Traceability and registration claims are visible, but dispute-grade accountability mechanics remain underspecified.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "deliberative_layer": {
+      "description": "Trust and registration language is prominent in the public framing.",
+      "evidence_level": "public",
+      "confidence": "high"
+    }
+  },
+  "governance_shape": {
+    "name": "Delegated Agent Accountability",
+    "summary": "Technical registration must be joined to accountable principal binding, scope, revocation, and dispute traceability.",
+    "validated_assumptions": [
+      "Registered or tokenized agent identity is not equivalent to legal personhood.",
+      "Traceability must reach a responsible principal."
+    ],
+    "control_points": [
+      "delegation scope",
+      "revocation",
+      "dispute evidence"
+    ]
+  },
+  "operating_envelope": {
+    "approved_conditions": [
+      "agent acts only within explicit delegated scope",
+      "principal binding remains traceable"
+    ],
+    "departure_signals": [
+      "traceability stops at technical agent identity",
+      "revocation and expiry are unclear"
+    ],
+    "intervention_rules": [
+      "do not treat registration alone as sufficient accountability"
+    ]
+  },
+  "lifecycle_validation": {
+    "pre_deployment_validated": false,
+    "deployment_gate_defined": false,
+    "runtime_monitoring_defined": false,
+    "out_of_envelope_response_defined": false,
+    "notes": "Illustrative case pattern, not a live deployed system profile."
+  },
+  "risk_profile": {
+    "summary": "Primary risk is accountability displacement rather than host compromise.",
+    "authority": {
+      "level": "high",
+      "notes": "Agent may initiate consequential transactions under delegated authority."
+    },
+    "reach": {
+      "level": "medium",
+      "notes": "Dependent on connected merchant, wallet, or payment scope."
+    },
+    "reversibility": {
+      "level": "medium",
+      "notes": "Some transactions may be disputed or reversed, but not without cost."
+    },
+    "coupling": {
+      "level": "medium",
+      "notes": "Coupling grows where agent identity, registration, and payment rails combine."
+    },
+    "consequence": {
+      "level": "high",
+      "notes": "Consequences include financial loss, dispute complexity, and accountability confusion."
+    },
+    "composition": {
+      "level": "high",
+      "notes": "Risk increases when registration, authentication, and transaction authority are treated as one solved problem."
+    }
+  },
+  "failure_classes": [
+    {
+      "id": "F008",
+      "status": "present",
+      "notes": "The central risk is accountability displacement."
+    },
+    {
+      "id": "F010",
+      "status": "present",
+      "notes": "Risk profile questions often remain weaker than the trust language."
+    }
+  ],
+  "anti_patterns": [
+    {
+      "id": "AP015",
+      "status": "present",
+      "evidence_level": "mixed",
+      "summary": "Framework or trust claims outpace explicit risk profiling.",
+      "linked_failure_classes": [
+        "F010"
+      ],
+      "tests": [
+        {
+          "test_id": "AP015-T1",
+          "result": "fail",
+          "notes": "Pattern-level materials do not reliably expose a full deployment-specific risk profile.",
+          "evidence_level": "mixed"
+        }
+      ]
+    },
+    {
+      "id": "AP017",
+      "status": "present",
+      "evidence_level": "mixed",
+      "summary": "Technical agent identity risks being mistaken for accountable legal standing.",
+      "linked_failure_classes": [
+        "F008"
+      ],
+      "tests": [
+        {
+          "test_id": "AP017-T1",
+          "result": "indeterminate",
+          "notes": "Delegation chain details are not fully visible in the generalized public pattern.",
+          "evidence_level": "public"
+        },
+        {
+          "test_id": "AP017-T4",
+          "result": "fail",
+          "notes": "Trust and registration language can overstate what technical identity proves.",
+          "evidence_level": "mixed"
+        }
+      ]
+    }
+  ],
+  "evidence_summary": [
+    {
+      "kind": "public_source_review",
+      "description": "Public agentic-commerce materials emphasize registration, trust, and traceability."
+    },
+    {
+      "kind": "case_study",
+      "description": "Generalized pattern analysis in the repository's registered-agent accountability case study."
+    }
+  ],
+  "residual_risk": [
+    "Registration can still mask weak delegation accountability.",
+    "Dispute traceability may remain incomplete."
+  ],
+  "demotion_backlog": [
+    {
+      "title": "Bind agent credentials to accountable delegated principals",
+      "priority": "high",
+      "status": "proposed",
+      "linked_anti_pattern": "AP017"
+    }
+  ],
+  "links": [
+    {
+      "label": "Case study",
+      "target": "case-studies/registered-agent-without-delegated-accountability/README.md"
+    }
+  ],
+  "attestation": {
+    "status": "draft"
+  }
+}

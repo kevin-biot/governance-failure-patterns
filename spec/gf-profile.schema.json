@@ -112,6 +112,18 @@
         }
       }
     },
+    "governance_shape": {
+      "$ref": "#/$defs/governanceShape"
+    },
+    "operating_envelope": {
+      "$ref": "#/$defs/operatingEnvelope"
+    },
+    "lifecycle_validation": {
+      "$ref": "#/$defs/lifecycleValidation"
+    },
+    "risk_profile": {
+      "$ref": "#/$defs/riskProfile"
+    },
     "failure_classes": {
       "type": "array",
       "items": {
@@ -153,6 +165,9 @@
         "$ref": "#/$defs/linkItem"
       },
       "default": []
+    },
+    "attestation": {
+      "$ref": "#/$defs/attestationRef"
     }
   },
   "$defs": {
@@ -179,6 +194,137 @@
             "medium",
             "high"
           ]
+        }
+      }
+    },
+    "governanceShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "summary"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validated_assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "control_points": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "operatingEnvelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "approved_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "departure_signals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "intervention_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "lifecycleValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pre_deployment_validated": {
+          "type": "boolean"
+        },
+        "deployment_gate_defined": {
+          "type": "boolean"
+        },
+        "runtime_monitoring_defined": {
+          "type": "boolean"
+        },
+        "out_of_envelope_response_defined": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "authority": {
+          "$ref": "#/$defs/riskDimension"
+        },
+        "reach": {
+          "$ref": "#/$defs/riskDimension"
+        },
+        "reversibility": {
+          "$ref": "#/$defs/riskDimension"
+        },
+        "coupling": {
+          "$ref": "#/$defs/riskDimension"
+        },
+        "consequence": {
+          "$ref": "#/$defs/riskDimension"
+        },
+        "composition": {
+          "$ref": "#/$defs/riskDimension"
+        }
+      }
+    },
+    "riskDimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "notes"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
         }
       }
     },
@@ -237,6 +383,14 @@
         "summary": {
           "type": "string"
         },
+        "linked_failure_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^F[0-9]{3}$"
+          },
+          "default": []
+        },
         "tests": {
           "type": "array",
           "items": {
@@ -275,6 +429,9 @@
             "type": "string"
           },
           "default": []
+        },
+        "evidence_level": {
+          "$ref": "#/$defs/evidenceLevel"
         }
       }
     },
@@ -294,6 +451,10 @@
             "document_review",
             "replay_test",
             "perturbation_test",
+            "drill_or_exercise",
+            "identity_review",
+            "monitoring_review",
+            "policy_stack_review",
             "private_internal_research",
             "case_study"
           ]
@@ -356,6 +517,31 @@
         },
         "target": {
           "type": "string"
+        }
+      }
+    },
+    "attestationRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "none",
+            "draft",
+            "signed",
+            "expired"
+          ]
+        },
+        "signed_by": {
+          "type": "string"
+        },
+        "attestation_uri": {
+          "type": "string"
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date"
         }
       }
     },

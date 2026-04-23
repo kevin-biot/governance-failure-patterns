@@ -21,6 +21,7 @@ That is necessary but insufficient.
 Deployers, auditors, policy teams, and researchers also need:
 
 - a standard profile shape for recording exposure
+- a way to encode governance shape, operating envelope, and risk profile
 - named tests that can challenge anti-pattern claims
 - a repeatable attestation format
 - reusable report structures for findings and remediation
@@ -46,6 +47,7 @@ Each conformance test in this spec asks a bounded question:
 | `gf-profile.schema.json` | JSON Schema for a governance fragility profile | v0.1 |
 | `anti-pattern-conformance-tests.md` | Named test procedures for current anti-patterns | v0.1 |
 | `attestation-format.md` | Signed findings shape for a governance fragility attestation | v0.1 |
+| `examples/` | Worked example profiles showing how the schema is intended to be used | v0.1 |
 
 ## Design principles
 
