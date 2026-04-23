@@ -34,8 +34,9 @@ The repository is designed to make those failures:
   Bounded analyses of public or generalized governance patterns.
 - [patterns/](./patterns/)
   Repair-oriented notes such as `policy as runtime`, `runtime evidence`,
-  `doctrine as coupling layer`, `governance lifecycle validation`, and
-  `delegated agent identity`.
+  `doctrine as coupling layer`, `sovereignty requires verifier-friendly
+  evidence`, `reference governance shapes`, `governance lifecycle validation`,
+  and `delegated agent identity`.
 - [spec/](./spec/)
   Profile schema, anti-pattern conformance tests, attestation format, and
   worked examples.
@@ -132,6 +133,20 @@ This repository is intended for public use. Documents should be:
 
 See [editorial-policy.md](./editorial-policy.md).
 
+## Release discipline
+
+Before public release, structural changes should move through explicit change
+control rather than informal drift.
+
+- [CHANGELOG.md](./CHANGELOG.md)
+  Records structural additions and meaningful claim-shape changes.
+- [CONTRIBUTING.md](./CONTRIBUTING.md)
+  Defines contribution priorities, claim classes, and versioning rules.
+- [PUBLICATION-STANDARD.md](./PUBLICATION-STANDARD.md)
+  Defines the public-readiness gates for publishing notes, classes, and cases.
+
+The current baseline release tag is `v0.1.0`.
+
 ## Status
 
 The repository is currently maintained in private incubation while language,
@@ -151,6 +166,9 @@ The most useful contributions are:
 - anti-patterns tied to real conformance questions
 - worked profiles and example assessments
 - critiques that improve falsifiability, evidence discipline, or repair paths
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the contribution standard and
+[PUBLICATION-STANDARD.md](./PUBLICATION-STANDARD.md) for public-release gates.
 
 ## License
 

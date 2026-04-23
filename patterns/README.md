@@ -5,6 +5,13 @@ failure classes in `taxonomy/`.
 
 Candidate patterns include:
 
+- reference governance shapes
+- creation governance shape
+- data governance shape
+- execution governance shape
+- interface governance shape
+- evidence governance shape
+- portability governance shape
 - normative charter
 - omission register
 - counter-frame record
@@ -14,5 +21,6 @@ Candidate patterns include:
 - policy as runtime
 - runtime evidence
 - doctrine as coupling layer
+- sovereignty requires verifier-friendly evidence
 - governance lifecycle validation
 - delegated agent identity
