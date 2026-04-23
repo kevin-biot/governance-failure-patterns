@@ -40,6 +40,9 @@ The repository is designed to make those failures:
 - [spec/](./spec/)
   Profile schema, anti-pattern conformance tests, attestation format, and
   worked examples.
+- [docs/](./docs/)
+  Longer-form method notes and crosswalks, including the AI Incident Database
+  governance crosswalk method and mapping guidance.
 - [templates/](./templates/) and [reports/templates/](./reports/templates/)
   Reusable authoring scaffolds for cases, patterns, profiles, and findings
   reports.
@@ -107,6 +110,8 @@ The current anti-pattern catalogue includes, among others:
 - use the case-study and provenance templates to keep claims bounded
 - distinguish clearly between public evidence, analytic inference, and any
   non-public supporting basis
+- use [docs/aiid-governance-crosswalk-method.md](./docs/aiid-governance-crosswalk-method.md)
+  when mapping public AI incident records into governance interpretations
 
 ### As a deployer or assessor
 
