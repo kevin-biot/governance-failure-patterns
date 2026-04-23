@@ -8,6 +8,12 @@
 
 [One paragraph stating the primary governance concern in plain language.]
 
+## Governance Shape
+
+- Claimed shape: [name]
+- Operating envelope: [short statement]
+- Overall risk profile: [short statement]
+
 ## In-Scope Anti-Patterns
 
 - [APXXX] [Title] — [present / demoted / indeterminate / not present]

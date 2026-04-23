@@ -19,6 +19,11 @@ State how the anti-pattern creates or amplifies fragility.
 What makes the anti-pattern look useful, modern, or rigorous while it is
 actually expanding governance fragility.
 
+## Suggested Conformance Tests
+
+- APXXX-T1
+- APXXX-T2
+
 ## Demotion Path
 
 - remediation 1

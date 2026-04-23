@@ -16,6 +16,16 @@ real systems and frameworks.*
 | `technical-findings-template.md` | Architect, reviewer, auditor, researcher | Test-by-test findings and evidence shape |
 | `remediation-backlog-template.md` | Delivery team, governance owner, architecture lead | Ordered demotion path for anti-patterns |
 
+## What the templates should now reflect
+
+At minimum, reports should be able to state:
+
+- the governance shape being claimed
+- the operating envelope being assumed
+- the risk profile of the deployed system or case
+- the evidence level supporting each major finding
+- the lifecycle handoff from design validation to runtime monitoring
+
 ## How to use
 
 1. Identify the in-scope anti-patterns.

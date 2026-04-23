@@ -14,3 +14,4 @@
 - Prioritize actions that reduce structural fragility over cosmetic reporting.
 - If a remediation only improves observability, state that clearly.
 - Re-run the linked conformance tests after each meaningful remediation step.
+- Explicitly note whether each backlog item affects design validation, deployment gate, runtime monitoring, or dispute/accountability traceability.

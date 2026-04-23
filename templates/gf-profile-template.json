@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1",
+  "profile_id": "gf-example-001",
+  "subject": {
+    "name": "Example Subject",
+    "type": "case_study",
+    "scope_statement": "State what is being assessed."
+  },
+  "assessment": {
+    "date": "2026-04-23",
+    "assessor": "Example Assessor",
+    "status": "draft",
+    "method_version": "0.1"
+  },
+  "layers": {
+    "normative_governance": {
+      "description": "Describe the normative layer.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "measurement_substrate": {
+      "description": "Describe the measurement layer.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    },
+    "deliberative_layer": {
+      "description": "Describe the deliberative layer.",
+      "evidence_level": "mixed",
+      "confidence": "medium"
+    }
+  },
+  "governance_shape": {
+    "name": "Example Governance Shape",
+    "summary": "State the claimed governance shape."
+  },
+  "operating_envelope": {
+    "approved_conditions": [],
+    "departure_signals": [],
+    "intervention_rules": []
+  },
+  "lifecycle_validation": {
+    "pre_deployment_validated": false,
+    "deployment_gate_defined": false,
+    "runtime_monitoring_defined": false,
+    "out_of_envelope_response_defined": false
+  },
+  "risk_profile": {
+    "summary": "State the overall risk profile.",
+    "authority": {
+      "level": "unknown",
+      "notes": "Fill in."
+    },
+    "reach": {
+      "level": "unknown",
+      "notes": "Fill in."
+    },
+    "reversibility": {
+      "level": "unknown",
+      "notes": "Fill in."
+    },
+    "coupling": {
+      "level": "unknown",
+      "notes": "Fill in."
+    },
+    "consequence": {
+      "level": "unknown",
+      "notes": "Fill in."
+    },
+    "composition": {
+      "level": "unknown",
+      "notes": "Fill in."
+    }
+  },
+  "failure_classes": [],
+  "anti_patterns": [],
+  "evidence_summary": [
+    {
+      "kind": "case_study",
+      "description": "Add at least one evidence item."
+    }
+  ],
+  "residual_risk": [],
+  "demotion_backlog": [],
+  "links": [],
+  "attestation": {
+    "status": "draft"
+  }
+}

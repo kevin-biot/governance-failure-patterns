@@ -11,6 +11,21 @@
 - Boundary of assessment: [what was and was not assessed]
 - Evidence level: [public / mixed / private_internal / reproducible / attested]
 
+## Governance Shape
+
+- Claimed governance shape: [name]
+- Approved or assumed operating envelope: [short statement]
+- Lifecycle state: [preflight only / deployment gate / runtime monitored / unclear]
+
+## Risk Profile
+
+- Authority: [low / medium / high / critical / unknown]
+- Reach: [low / medium / high / critical / unknown]
+- Reversibility: [low / medium / high / critical / unknown]
+- Coupling: [low / medium / high / critical / unknown]
+- Consequence: [low / medium / high / critical / unknown]
+- Composition: [low / medium / high / critical / unknown]
+
 ## Layer Map
 
 ### Normative Governance
@@ -51,6 +66,11 @@
 
 - [risk 1]
 - [risk 2]
+
+## Lifecycle Gaps
+
+- [gap 1]
+- [gap 2]
 
 ## Boundaries
 
