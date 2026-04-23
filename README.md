@@ -35,6 +35,7 @@ The repository focuses on failure classes such as:
 - absorbed drift and baseline laundering
 - entrained consensus mistaken for validation
 - coupled reasoning collapse in AI-assisted framing
+- stationarity fiction in state models
 - omission invisibility
 - missing-stakeholder laundering
 - dashboard false reassurance
@@ -70,6 +71,7 @@ See [editorial-policy.md](./editorial-policy.md).
 - `F002` Absorbed Drift and Baseline Laundering
 - `F003` Entrained Consensus Mistaken for Validation
 - `F004` Coupled Reasoning Collapse
+- `F005` Stationarity Fiction in State Models
 
 ## Status
 

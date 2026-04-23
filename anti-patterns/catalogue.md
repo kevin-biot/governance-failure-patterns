@@ -127,3 +127,87 @@ governed even though the model authored the effective frame.
 - require constitutional readiness before model execution
 - lock stakeholder and omission artefacts before scoring
 - explicitly version normative changes separately from analytic changes
+
+---
+
+## AP005. Markov Without Transition-Drift Detection
+
+**Mechanism**
+
+A Markov or HMM-style state model is used as if the transition process were
+stable, while no explicit detector watches for drift in the transition matrix,
+state occupancy structure, or residual mismatch over time.
+
+**Failure-class linkage**
+
+- `F002` Absorbed Drift and Baseline Laundering
+- `F005` Stationarity Fiction in State Models
+
+**Visible signature**
+
+- neat state diagrams and transition probabilities
+- acceptable one-step prediction with decaying long-horizon performance
+- periodic model refreshes that restore fit without explaining regime change
+- deteriorating or unusual cases being reclassified into normal-state buckets
+
+**False reassurance pattern**
+
+The model appears more rigorous than a threshold system because it speaks in
+transition probabilities and latent states. But if the transition process is
+itself drifting, the formalism can mask failure rather than reveal it.
+
+**Demotion path**
+
+- add transition-drift monitoring
+- add residual and changepoint diagnostics
+- maintain external anchors outside the learned state partition
+- treat the Markov layer as subordinate to a broader drift-aware measurement
+  substrate
+
+**Boundaries**
+
+This anti-pattern is weaker when the Markov/HMM layer is clearly bounded to
+short-term prediction and is surrounded by explicit drift detection and regime
+break diagnostics.
+
+---
+
+## AP006. Natural-Language Peer Coupling
+
+**Mechanism**
+
+Agents exchange control-relevant content through natural-language peer channels,
+then recursively condition on one another's outputs without a stronger external
+control substrate.
+
+**Failure-class linkage**
+
+- `F003` Entrained Consensus Mistaken for Validation
+- `F004` Coupled Reasoning Collapse
+
+**Visible signature**
+
+- agent-to-agent conversation treated as a default robustness feature
+- later agent outputs inheriting earlier agent framings and vocabulary
+- rising agreement that is not backed by independent evidence
+- probe or monitor success persisting near visible behavioral degradation
+
+**False reassurance pattern**
+
+The system feels more robust because multiple agents are present and appear to
+cross-check one another. In practice, the peer channel can become the coupling
+surface that synchronizes blind spots and propagates collapse.
+
+**Demotion path**
+
+- reduce natural-language peer exchange for consequential execution
+- prefer typed or schema-bounded interaction channels
+- separate deterministic control state from narrative coordination
+- treat internal probes as partial sensors rather than definitive health checks
+- require external anchors before treating agent agreement as validation
+
+**Boundaries**
+
+This anti-pattern is weaker when peer interaction is tightly bounded, agents are
+genuinely heterogeneous, and consequential control remains outside the
+natural-language coordination loop.

@@ -42,6 +42,8 @@ The shared idea is useful:
 - `AP002` Pooled Baseline Drift Masking
 - `AP003` AI Consensus as Validation
 - `AP004` Constitution After the Model
+- `AP005` Markov Without Transition-Drift Detection
+- `AP006` Natural-Language Peer Coupling
 
 ## How to Read an Entry
 

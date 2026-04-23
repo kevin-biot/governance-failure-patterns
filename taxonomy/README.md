@@ -8,6 +8,7 @@ This directory contains named governance failure classes.
 - `F002` Absorbed Drift and Baseline Laundering
 - `F003` Entrained Consensus Mistaken for Validation
 - `F004` Coupled Reasoning Collapse
+- `F005` Stationarity Fiction in State Models
 
 Each class should be authored from the same template.
 
