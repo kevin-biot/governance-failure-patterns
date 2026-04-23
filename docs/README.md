@@ -19,6 +19,15 @@ sit between the top-level taxonomy and the formal `spec/` layer.
 - [../evidence/notes/aiid-crosswalk-source-pack.md](../evidence/notes/aiid-crosswalk-source-pack.md)
   Records the public source basis and evidence boundary for the AIID crosswalk
   surface.
+- [oecd-tool-catalogue-crosswalk-method.md](./oecd-tool-catalogue-crosswalk-method.md)
+  Defines how to use the OECD Catalogue as a mitigation-side governance
+  crosswalk.
+- [oecd-tool-catalogue-gap-analysis.md](./oecd-tool-catalogue-gap-analysis.md)
+  Distinguishes where trustworthy-AI tool supply is rich and where governance
+  design remains thin.
+- [../evidence/notes/oecd-tool-catalogue-source-pack.md](../evidence/notes/oecd-tool-catalogue-source-pack.md)
+  Records the public source basis and evidence boundary for the OECD
+  mitigation-side crosswalk.
 
 ## Why this layer exists
 
