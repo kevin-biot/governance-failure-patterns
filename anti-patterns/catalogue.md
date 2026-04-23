@@ -1,0 +1,129 @@
+# Governance Anti-Pattern Catalogue
+
+**Status:** Seed draft
+
+This catalogue names a first set of anti-patterns that are likely to recur in
+AI-assisted policy tooling and governance analytics.
+
+---
+
+## AP001. Dashboard Legitimacy Laundering
+
+**Mechanism**
+
+A dashboard or scorecard is treated as if it upgrades monitoring into
+justification simply because it is structured, visual, and repeatable.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+
+**Visible signature**
+
+- polished visual layer
+- summary composites presented early
+- weak documentation of framing and omission choices
+
+**False reassurance pattern**
+
+The dashboard looks neutral and technical, so the underlying policy choice
+appears less contestable than it really is.
+
+**Demotion path**
+
+- add a normative charter
+- publish omission register alongside the dashboard
+- treat the dashboard as observation support, not as legitimacy support
+
+---
+
+## AP002. Pooled Baseline Drift Masking
+
+**Mechanism**
+
+Relative positioning against pooled or moving reference distributions masks
+slow structural deterioration by allowing the frame to drift with the system.
+
+**Failure-class linkage**
+
+- `F002` Absorbed Drift and Baseline Laundering
+
+**Visible signature**
+
+- percentile dashboards
+- category stability despite long-run directional decline
+- heavy imputation with weak break detection
+
+**False reassurance pattern**
+
+The system appears stable because its relative position remains acceptable even
+while the absolute substrate worsens.
+
+**Demotion path**
+
+- add external anchors
+- add explicit drift-rate measures
+- add coherence / coupling monitoring
+- separate absolute trend views from relative rank views
+
+---
+
+## AP003. AI Consensus as Validation
+
+**Mechanism**
+
+Agreement across shared AI-assisted drafts, teams, or deliberation loops is
+treated as if it were independent confirmation.
+
+**Failure-class linkage**
+
+- `F003` Entrained Consensus Mistaken for Validation
+
+**Visible signature**
+
+- multiple rounds of AI-assisted synthesis
+- narrowing option set after shared draft circulation
+- internal confidence rising faster than external challenge quality
+
+**False reassurance pattern**
+
+The process feels robust because many actors "converged," when in fact they
+converged inside the same coupled environment.
+
+**Demotion path**
+
+- require counter-frames
+- diversify source packs
+- separate draft synthesis from decision authority
+- maintain a deterministic measurement layer below narrative convergence
+
+---
+
+## AP004. Constitution After the Model
+
+**Mechanism**
+
+Normative rules are written or clarified only after the analytic model already
+exists, causing the constitution to ratify the tool rather than govern it.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+- `F004` Coupled Reasoning Collapse
+
+**Visible signature**
+
+- framework first, charter later
+- values inferred from indicators rather than declared before them
+- governance documentation produced mainly to justify an existing toolchain
+
+**False reassurance pattern**
+
+Because the constitution exists on paper, institutions claim the model is now
+governed even though the model authored the effective frame.
+
+**Demotion path**
+
+- require constitutional readiness before model execution
+- lock stakeholder and omission artefacts before scoring
+- explicitly version normative changes separately from analytic changes

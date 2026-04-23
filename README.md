@@ -22,6 +22,7 @@ The working thesis is simple:
 This repository therefore aims to publish:
 
 - failure classes
+- anti-patterns
 - case studies
 - remediation patterns
 - templates for structured analysis
@@ -55,6 +56,9 @@ See [editorial-policy.md](./editorial-policy.md).
 - [framework.md](./framework.md) — what a governance failure class is and how
   the taxonomy works
 - [taxonomy/](./taxonomy/) — named failure classes
+- [anti-patterns/](./anti-patterns/) — named deployer-visible bad habits and
+  architectural/process anti-patterns that instantiate or amplify the failure
+  classes
 - [case-studies/](./case-studies/) — bounded example analyses
 - [patterns/](./patterns/) — remediation and tightening patterns
 - [templates/](./templates/) — reusable authoring templates
