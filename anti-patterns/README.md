@@ -44,6 +44,11 @@ The shared idea is useful:
 - `AP004` Constitution After the Model
 - `AP005` Markov Without Transition-Drift Detection
 - `AP006` Natural-Language Peer Coupling
+- `AP007` Policy PDF, Runtime Nothing
+- `AP008` Evidence After Action
+- `AP009` Human Oversight as Ceremony
+- `AP010` Capability Discovery as Attack Surface
+- `AP011` Rulebook Without Doctrine
 
 ## How to Read an Entry
 

@@ -11,3 +11,6 @@ Candidate patterns include:
 - deterministic measurement substrate
 - coherence monitoring
 - bounded AI role
+- policy as runtime
+- runtime evidence
+- doctrine as coupling layer
