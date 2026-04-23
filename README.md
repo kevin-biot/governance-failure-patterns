@@ -25,6 +25,7 @@ This repository therefore aims to publish:
 - anti-patterns
 - case studies
 - remediation patterns
+- conformance methods
 - templates for structured analysis
 
 ## Scope
@@ -64,6 +65,9 @@ See [editorial-policy.md](./editorial-policy.md).
   including `smce-socrates`, `agent-chains`, and topology-focused coupling cases
 - [patterns/](./patterns/) — remediation and tightening patterns
 - [templates/](./templates/) — reusable authoring templates
+- [spec/](./spec/) — profile shape, conformance tests, and attestation format
+- [reports/templates/](./reports/templates/) — reusable findings and remediation
+  report templates
 - [evidence/](./evidence/) — notes, source references, and supporting material
 
 ## Initial Seed Set
@@ -84,3 +88,4 @@ The immediate job is not scale. It is quality:
 - remove private IP
 - generalize the examples
 - make the language fit for public dialogue
+- make the anti-patterns testable

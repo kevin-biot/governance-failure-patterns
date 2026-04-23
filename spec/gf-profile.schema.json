@@ -1,0 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/governance-failure-patterns/spec/gf-profile.schema.json",
+  "title": "Governance Fragility Profile",
+  "description": "A machine-readable profile for recording governance failure pattern exposure, evidence, and test outcomes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_id",
+    "subject",
+    "assessment",
+    "layers",
+    "anti_patterns",
+    "evidence_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "type",
+        "scope_statement"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "policy_tool",
+            "agent_system",
+            "institutional_workflow",
+            "measurement_stack",
+            "governance_framework",
+            "case_study"
+          ]
+        },
+        "scope_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sector": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "assessor",
+        "status"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "assessor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "internal_review",
+            "published"
+          ]
+        },
+        "method_version": {
+          "type": "string"
+        }
+      }
+    },
+    "layers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "normative_governance",
+        "measurement_substrate",
+        "deliberative_layer"
+      ],
+      "properties": {
+        "normative_governance": {
+          "$ref": "#/$defs/layerSummary"
+        },
+        "measurement_substrate": {
+          "$ref": "#/$defs/layerSummary"
+        },
+        "deliberative_layer": {
+          "$ref": "#/$defs/layerSummary"
+        }
+      }
+    },
+    "failure_classes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/failureClassRef"
+      },
+      "default": []
+    },
+    "anti_patterns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/antiPatternAssessment"
+      }
+    },
+    "evidence_summary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidenceItem"
+      }
+    },
+    "residual_risk": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "demotion_backlog": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/remediationItem"
+      },
+      "default": []
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/linkItem"
+      },
+      "default": []
+    }
+  },
+  "$defs": {
+    "layerSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "evidence_level",
+        "confidence"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_level": {
+          "$ref": "#/$defs/evidenceLevel"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
+    "failureClassRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^F[0-9]{3}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "in_scope",
+            "present",
+            "not_present",
+            "unclear"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "antiPatternAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "evidence_level",
+        "tests"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^AP[0-9]{3}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "present",
+            "demoted",
+            "not_present",
+            "indeterminate"
+          ]
+        },
+        "evidence_level": {
+          "$ref": "#/$defs/evidenceLevel"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/testResult"
+          }
+        }
+      }
+    },
+    "testResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "test_id",
+        "result"
+      ],
+      "properties": {
+        "test_id": {
+          "type": "string",
+          "pattern": "^AP[0-9]{3}-T[0-9]+$"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "indeterminate",
+            "not_run"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "artifact_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "evidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "description"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "public_source_review",
+            "architecture_inspection",
+            "document_review",
+            "replay_test",
+            "perturbation_test",
+            "private_internal_research",
+            "case_study"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string"
+        }
+      }
+    },
+    "remediationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "priority",
+        "status"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "accepted",
+            "in_progress",
+            "done"
+          ]
+        },
+        "linked_anti_pattern": {
+          "type": "string",
+          "pattern": "^AP[0-9]{3}$"
+        }
+      }
+    },
+    "linkItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "target"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        }
+      }
+    },
+    "evidenceLevel": {
+      "type": "string",
+      "enum": [
+        "public",
+        "mixed",
+        "private_internal",
+        "reproducible",
+        "attested"
+      ]
+    }
+  }
+}

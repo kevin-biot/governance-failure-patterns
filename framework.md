@@ -47,6 +47,13 @@ Each anti-pattern should answer:
 - what visible symptoms it produces in practice
 - what demotion or remediation path would reduce the damage
 
+Each conformance test should answer:
+
+- what anti-pattern claim is being challenged
+- what evidence mode is being used
+- what would count as pass, fail, or indeterminate
+- what result should trigger remediation rather than debate
+
 ## Design Principle
 
 This repository is not anti-tool and not anti-institution by default.
@@ -68,6 +75,9 @@ The repository distinguishes between:
 This distinction matters because public dialogue often begins with visible bad
 practice rather than with abstract mechanism. Anti-patterns are therefore the
 operational front-end of the taxonomy.
+
+Conformance tests are the operational back-end. They convert anti-patterns from
+named critique into challengeable findings.
 
 ## Three Layers
 
