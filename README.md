@@ -63,7 +63,7 @@ See [editorial-policy.md](./editorial-policy.md).
   classes
 - [case-studies/](./case-studies/) — bounded example analyses
   including `smce-socrates`, `agent-chains`, topology-focused coupling cases,
-  and runtime-governance cases
+  runtime-governance cases, and generalized agent-accountability cases
 - [patterns/](./patterns/) — remediation and tightening patterns
   including `policy as runtime`, `runtime evidence`, and `doctrine as coupling layer`
 - [templates/](./templates/) — reusable authoring templates
