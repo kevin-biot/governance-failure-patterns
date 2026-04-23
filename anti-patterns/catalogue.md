@@ -188,6 +188,8 @@ control substrate.
 **Visible signature**
 
 - agent-to-agent conversation treated as a default robustness feature
+- architecture in which every consequential peer edge carries free-form natural
+  language
 - later agent outputs inheriting earlier agent framings and vocabulary
 - rising agreement that is not backed by independent evidence
 - probe or monitor success persisting near visible behavioral degradation
@@ -196,7 +198,9 @@ control substrate.
 
 The system feels more robust because multiple agents are present and appear to
 cross-check one another. In practice, the peer channel can become the coupling
-surface that synchronizes blind spots and propagates collapse.
+surface that synchronizes blind spots and propagates collapse. If every peer
+edge is natural language, the architecture may be selecting a high-coupling
+substrate before workload even begins.
 
 **Demotion path**
 
@@ -205,6 +209,8 @@ surface that synchronizes blind spots and propagates collapse.
 - separate deterministic control state from narrative coordination
 - treat internal probes as partial sensors rather than definitive health checks
 - require external anchors before treating agent agreement as validation
+- review topology choice explicitly rather than assuming monitoring can recover
+  independence after deployment
 
 **Boundaries**
 

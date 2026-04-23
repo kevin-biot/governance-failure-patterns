@@ -61,6 +61,7 @@ See [editorial-policy.md](./editorial-policy.md).
   architectural/process anti-patterns that instantiate or amplify the failure
   classes
 - [case-studies/](./case-studies/) — bounded example analyses
+  including `smce-socrates`, `agent-chains`, and topology-focused coupling cases
 - [patterns/](./patterns/) — remediation and tightening patterns
 - [templates/](./templates/) — reusable authoring templates
 - [evidence/](./evidence/) — notes, source references, and supporting material
