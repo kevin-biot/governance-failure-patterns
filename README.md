@@ -75,6 +75,22 @@ better method:
 4. state the evidence level honestly
 5. offer a bounded demotion or repair path
 
+## Companion repository
+
+This repository is a companion to
+[Blast Radius Framework](https://github.com/kevin-biot/blast-radius-framework).
+
+The relationship is:
+
+- **Blast Radius Framework** rates the operational blast surface of a deployed
+  system and provides an attestation form.
+- **Governance Failure Patterns** diagnoses the governance weakness patterns
+  that often explain why systems are weakly controlled, misleadingly governed,
+  or difficult to audit.
+
+See [docs/blast-radius-framework-relationship.md](./docs/blast-radius-framework-relationship.md)
+for the fuller distinction.
+
 ## Current taxonomy
 
 The current seed classes are:

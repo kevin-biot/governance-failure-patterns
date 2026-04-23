@@ -28,6 +28,9 @@ sit between the top-level taxonomy and the formal `spec/` layer.
 - [../evidence/notes/oecd-tool-catalogue-source-pack.md](../evidence/notes/oecd-tool-catalogue-source-pack.md)
   Records the public source basis and evidence boundary for the OECD
   mitigation-side crosswalk.
+- [blast-radius-framework-relationship.md](./blast-radius-framework-relationship.md)
+  Explains how this repository relates to the sibling Blast Radius Framework
+  repository without collapsing the two.
 
 ## Why this layer exists
 
