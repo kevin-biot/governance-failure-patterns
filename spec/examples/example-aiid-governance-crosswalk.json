@@ -1,0 +1,57 @@
+{
+  "source_system": "AI Incident Database",
+  "source_record_id": "EXAMPLE-001",
+  "source_url": "https://incidentdatabase.ai/",
+  "source_taxonomies": {
+    "cset_harm": [
+      "example_harm"
+    ],
+    "gmf": {
+      "goal": "example_goal",
+      "technology": "example_technology",
+      "technical_failure": "example_failure"
+    },
+    "mit": {
+      "risk_domain": "example_domain",
+      "entity": "human_and_ai",
+      "timing": "post_deployment",
+      "intent": "unintentional"
+    }
+  },
+  "incident_summary": "Illustrative AI incident summary used to show crosswalk shape.",
+  "observed_outcome": "A harmful or governance-relevant outcome occurred after deployment.",
+  "candidate_failure_classes": [
+    {
+      "id": "F009",
+      "confidence": "medium",
+      "notes": "The incident appears consistent with a lifecycle break between validation and runtime."
+    }
+  ],
+  "candidate_anti_patterns": [
+    {
+      "id": "AP014",
+      "confidence": "medium",
+      "notes": "A plausible interpretation is that launch-time validation remained in force while runtime conditions changed."
+    }
+  ],
+  "candidate_patterns": [
+    {
+      "id": "governance lifecycle validation",
+      "notes": "Would tighten the handoff from pre-deployment validation into runtime monitoring."
+    },
+    {
+      "id": "runtime evidence",
+      "notes": "Would improve replayability and auditability of the live governance state."
+    }
+  ],
+  "candidate_mitigations": [
+    "Define runtime drift ownership.",
+    "Expire stale validation claims.",
+    "Bind live monitoring to the approved operating envelope."
+  ],
+  "mapping_confidence": "medium",
+  "ambiguity_notes": [
+    "Public incident text may not expose the full internal control design.",
+    "The governance interpretation is therefore suggestive rather than definitive."
+  ]
+}
