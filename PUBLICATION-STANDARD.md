@@ -7,8 +7,8 @@ It is stricter than a drafting note and lighter than formal peer review.
 
 ## Purpose
 
-The repository is intended to become public-facing. That means each published
-document should be able to withstand at least three kinds of challenge:
+The repository is public-facing. Each published document should be able to
+withstand at least three kinds of challenge:
 
 - factual challenge
 - category challenge
@@ -23,11 +23,11 @@ The question is not only "is this interesting?" It is:
 
 ## Release gates
 
-Before a document is treated as public-ready, it should pass all of these.
+Before a document is treated as publication-ready, it should pass all of these.
 
 ### Gate 1: Boundary hygiene
 
-- private or proprietary implementation detail removed or generalized
+- non-public or proprietary implementation detail removed or generalized
 - client, patient, or partner specificity removed unless already public
 - no disguised leaks
 
@@ -67,7 +67,7 @@ If a note mixes them, the boundary must remain explicit.
 
 ## Change control
 
-For public release discipline:
+For release discipline:
 
 - structural changes should be logged in `CHANGELOG.md`
 - releases should be tagged
@@ -86,10 +86,9 @@ Use lightweight semantic versioning:
 - `PATCH`
   Clarifications, evidence-boundary cleanup, wording repairs, template fixes.
 
-## Public release recommendation
+## Baseline release expectation
 
-The first public opening should be a tagged release, for example `v0.1.0`,
-with:
+A stable public baseline should include:
 
 - root README
 - editorial policy
@@ -100,5 +99,4 @@ with:
 - anti-pattern catalogue
 - spec and examples
 
-That gives external readers a stable reference point rather than a moving
-private draft.
+That gives external readers a stable reference point rather than a moving draft.

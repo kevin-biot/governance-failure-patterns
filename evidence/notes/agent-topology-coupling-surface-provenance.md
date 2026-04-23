@@ -65,9 +65,9 @@ The current repository does not expose:
 - proprietary architecture specifics
 - unpublished measurement artifacts
 
-## Rule for Public Promotion
+## Maintenance Rule
 
-If this case later becomes public-facing, preserve the same distinction:
+Preserve the same distinction when this case is revised:
 
 - what the public Sentinel material demonstrates directly
 - what private internal measurement currently suggests

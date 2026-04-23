@@ -74,10 +74,10 @@ Some governance tests will produce:
 Indeterminate is allowed when the evidence is weak, the artefacts are missing,
 or the system was not instrumented well enough to answer honestly.
 
-**Private research is usable but must be marked.**
-This repository is currently private. Some tests may be informed by internal
-research, but profiles and attestations must mark that evidence level rather
-than laundering it into a public-looking fact.
+**Non-public research is usable but must be marked.**
+Some tests may be informed by non-public research, but profiles and
+attestations must mark that evidence level rather than laundering it into a
+public-looking fact.
 
 ## How to use
 

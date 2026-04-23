@@ -11,9 +11,9 @@ State why this provenance note exists.
 - source 1
 - source 2
 
-## Private Drafting or Research Basis
+## Non-Public Drafting or Research Basis
 
-State what private substrate informed the note, if any.
+State what non-public substrate informed the note, if any.
 
 ## Editorial Rule
 
@@ -21,9 +21,9 @@ State the boundary between:
 
 - source-backed claims
 - analytic inference
-- provisional private-internal claims
+- provisional non-public claims
 
-## Promotion Rule
+## Maintenance Rule
 
-State what would need to become public or reproducible before stronger public
-claims are justified.
+State what would need to be disclosed or independently reproduced before
+stronger claims are justified.

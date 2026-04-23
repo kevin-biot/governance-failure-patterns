@@ -50,8 +50,8 @@ It is no longer best described as primarily private-internal provisional.
 
 ## Editorial Rule
 
-The public-facing case should remain generalized unless and until there is a
-reason to name a specific project directly.
+The case should remain generalized unless there is a reason to name a specific
+project directly.
 
 For now the purpose is:
 
@@ -60,9 +60,9 @@ For now the purpose is:
 - name the institutional lag risk without turning the note into a project
   attack
 
-## Rule for Public Promotion
+## Maintenance Rule
 
-If this note later becomes public-facing:
+If this note is later revised:
 
 - cite the public ECS materials directly where they support the extraction
 - keep the note focused on the general governance pattern rather than one repo

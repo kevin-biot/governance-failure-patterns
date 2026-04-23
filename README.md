@@ -45,7 +45,7 @@ The repository is designed to make those failures:
   reports.
 - [evidence/](./evidence/)
   Source-pack and provenance notes that keep the boundary clear between
-  source-backed claims, analytic inference, and private incubation work.
+  source-backed claims, analytic inference, and non-public supporting work.
 
 ## Why this exists
 
@@ -105,8 +105,8 @@ The current anti-pattern catalogue includes, among others:
 
 - use the taxonomy to classify recurrent governance failures
 - use the case-study and provenance templates to keep claims bounded
-- distinguish clearly between public evidence, inference, and private
-  incubation
+- distinguish clearly between public evidence, analytic inference, and any
+  non-public supporting basis
 
 ### As a deployer or assessor
 
@@ -135,8 +135,8 @@ See [editorial-policy.md](./editorial-policy.md).
 
 ## Release discipline
 
-Before public release, structural changes should move through explicit change
-control rather than informal drift.
+Structural changes should move through explicit change control rather than
+informal drift.
 
 - [CHANGELOG.md](./CHANGELOG.md)
   Records structural additions and meaningful claim-shape changes.
@@ -149,12 +149,12 @@ The current baseline release tag is `v0.1.0`.
 
 ## Status
 
-The repository is currently maintained in private incubation while language,
-structure, and examples are refined for public release.
+The repository is published as a baseline public framework and will continue to
+evolve through tagged releases and documented structural changes.
 
 The publication standard is straightforward:
 
-- private or proprietary implementation detail removed or generalized
+- non-public or proprietary implementation detail removed or generalized
 - claims kept bounded and falsifiable
 - at least one mitigation or tightening path stated
 

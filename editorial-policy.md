@@ -2,19 +2,19 @@
 
 ## Purpose
 
-This repository is intended to become public. Everything added here should be
-written as if it may later be read by regulators, researchers, institutional
-critics, and builders outside the original author circle.
+This repository is public-facing. Everything added here should be written as if
+it may be read by regulators, researchers, institutional critics, and builders
+outside the original author circle.
 
 ## Generalization Rule
 
-Private work may inform the analysis, but private IP must not be exposed.
+Non-public work may inform the analysis, but non-public IP must not be exposed.
 
 That means:
 
 - do not copy internal DOP architecture details unless they are already public
 - do not copy client-specific or patient-specific content
-- do not import private prompts, datasets, or proprietary workflows verbatim
+- do not import non-public prompts, datasets, or proprietary workflows verbatim
 - do not write case studies as disguised leaks
 
 Instead:
@@ -46,9 +46,9 @@ Every failure-class note should include:
 
 ## Publication Standard
 
-Before any document is moved from private incubation to public release, it
-should pass three checks:
+Before any document is treated as publication-ready, it should pass three
+checks:
 
-1. private material removed or generalized
+1. non-public material removed or generalized
 2. claims bounded and falsifiable
 3. at least one remediation path stated

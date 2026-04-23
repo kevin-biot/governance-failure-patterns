@@ -63,5 +63,5 @@ governance-method repository.
 
 - `0.1.0` is the first structured release baseline for public visibility.
 - The repository remains conservative about evidence boundaries:
-  public source-backed claims, analytic inference, and private internal
+  public source-backed claims, analytic inference, and non-public
   incubation should remain explicitly separated.

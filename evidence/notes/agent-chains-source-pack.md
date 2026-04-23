@@ -41,15 +41,15 @@ Verification note:
 - no public paper URL beyond the repository's own "preprint forthcoming"
   statement is relied on in the current case note
 
-## Private Drafting Substrates
+## Non-Public Drafting Substrates
 
-These informed the private incubation analysis but are not the public evidence
+These informed the local analytic structure but are not the public evidence
 base for the current case note:
 
 - DOP governance note on agent chains as an antipattern in high-risk domains
 - DOP governance note on the Gagne collapse analogy for policy framing
 
-## Rule for Future Expansion
+## Maintenance Rule
 
 If this case study expands, keep the same boundary explicit:
 

@@ -8,7 +8,7 @@ This note records the source pack used for the `SMCE/SOCRATES` case study and
 separates:
 
 - public sources used for source-backed claims
-- private drafting substrates used only during incubation
+- non-public drafting substrates used only as supporting analytic structure
 
 ## Public Sources Used
 
@@ -95,24 +95,24 @@ Checked claims:
 - component and overall synthetic indices are medians of percentile positions
 - five-colour dashboard communication layer
 
-## Private Drafting Substrates
+## Non-Public Drafting Substrates
 
-These sources informed the case-study structure during private incubation but
-should not be treated as public evidence in their own right unless they are
-later generalized or published separately.
+These sources informed the case-study structure but should not be treated as
+public evidence in their own right unless they are later generalized or
+published separately.
 
 - DOP governance note on SMCE/SOCRATES policy-foundation critique
 - DOP governance note on normative governance patch design
 - DOP governance note on Gagne collapse analogy for policy framing
 - DOP governance note on PSH tightening for policy tools
 
-## Rule for Future Expansion
+## Maintenance Rule
 
 If this case study is expanded, every added claim should be tagged mentally as
 one of:
 
 - source-backed from public JRC/EC material
 - inference from public material
-- private incubation inference not yet suitable for public release
+- non-public supporting inference not yet suitable for public reliance
 
 That distinction should remain visible in the case-study prose.
