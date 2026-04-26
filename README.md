@@ -75,6 +75,33 @@ better method:
 4. state the evidence level honestly
 5. offer a bounded demotion or repair path
 
+## Public-interest reuse potential
+
+This repository is published openly as public-interest scaffolding. The goal is
+to shorten the path from vague governance language to concrete institutional
+artifacts by giving regulators, standards bodies, deployers, auditors, and
+reviewers a named set of failure classes, anti-patterns, and repair patterns
+they can reuse directly.
+
+In particular, the material here is intended to be reusable as input to:
+
+- harmonised standards discussions and draft review
+- European Commission guidance
+- common specifications where standards are late or insufficient
+- AI regulatory sandbox methods, reporting, and evidence-based learning
+- conformity assessment and audit practice
+- deployer governance and remediation programs
+
+The repository does **not** claim to be an official standard, guidance
+document, or conformity assessment artifact in itself. It is an open diagnosis
+and remediation scaffold that institutions with formal mandates can refine and
+formalise.
+
+This repository is especially useful when paired with
+[Blast Radius Framework](https://github.com/kevin-biot/blast-radius-framework),
+which provides the positive rating, attestation, and operational-impact layer
+that complements the failure taxonomy here.
+
 ## Companion repository
 
 This repository is a companion to
