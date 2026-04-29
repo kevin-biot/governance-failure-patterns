@@ -102,6 +102,10 @@ This repository is especially useful when paired with
 which provides the positive rating, attestation, and operational-impact layer
 that complements the failure taxonomy here.
 
+For a public research crosswalk showing how the two repositories relate to the
+working paper *AI Agents Under EU Law*, see
+[Repo-Set Crosswalk to *AI Agents Under EU Law*](https://github.com/kevin-biot/blast-radius-framework/blob/main/adoption/crosswalk-ai-agents-under-eu-law.md).
+
 ## Companion repository
 
 This repository is a companion to

@@ -734,3 +734,88 @@ standing and accountable delegation.
 This anti-pattern is weaker when agent credentials are explicitly framed as
 delegated authority from a legal principal, with clear scope, expiry,
 revocation, and evidentiary traceability to the responsible actor.
+
+---
+
+## AP018. Closed-World Tool Schema Example Anchoring
+
+**Mechanism**
+
+A tool or function schema (OpenAI tool-calling format, MCP `inputSchema`,
+JSON-Schema function description) embeds a concrete example value inside the
+parameter `description` field — typically as `e.g. 'X' or 'Y'` text intended to
+clarify format. The model consuming the schema reads that example as part of
+every tool-call decision and treats it as a default or typical value, biasing
+chosen arguments toward the example string regardless of the runtime context
+the tool was meant to serve.
+
+The schema appears governance-rigorous because it is typed and validated. The
+prose inside the `description` field is not part of the type system but is
+attended to with comparable weight by the model. Where the runtime context is
+ambiguous — which is most consequential calls — the static example wins.
+
+**Failure-class linkage**
+
+- `F001` Formal Transparency Without Foundational Adequacy
+
+**Visible signature**
+
+- tool / function schemas carry concrete example argument strings inside
+  natural-language `description` fields (`"e.g. '14A' or '32H'"`,
+  `"for example DELETE_USER"`, `"like account-123"`)
+- empirical disproportion between calls targeting the example value and any
+  reasonable prior over the argument space
+- the bias persists across model swaps within a quality band — same example,
+  different model, similar concentration — because the schema text is the
+  shared input
+- changing the example string migrates the bias to the new value rather than
+  eliminating it
+- failure modes attributed to "the model" or "the substrate" before anyone
+  audits the schema text
+
+**False reassurance pattern**
+
+The tool boundary feels governed because the schema is typed, the parameters
+have validators, and tool calls are logged. In practice, the schema's
+`description` text is a low-attention surface that turns out to drive
+high-leverage default behavior. Apparatus measurements that report substrate
+or model failure rates can be partially attributable to the schema designer's
+example choices, with the actual substrate properties masked underneath.
+
+**Demotion path**
+
+- prefer abstract format descriptions over concrete examples
+  (`"row+letter format per format-spec.md"` not `"e.g. '14A' or '32H'"`)
+- where examples must appear, generate them at call time from runtime state
+  so the example reflects current availability rather than a static anchor
+- rotate examples across an enumerated representative set so anchoring
+  distributes rather than concentrates on any single value
+- validate at the tool boundary that argument distribution does not collapse
+  onto the schema example — flag and audit if it does
+- treat the entire schema, including `description` prose, as part of the
+  governance surface and review it under the same change-control as the
+  parameter types
+
+**Boundaries**
+
+This anti-pattern is weaker when schema descriptions carry only abstract
+format guidance, when example values are generated dynamically per call, or
+when the tool boundary independently audits argument distribution against the
+declared schema content.
+
+It is **stronger** wherever multiple agents or tools are coordinated through a
+shared schema catalogue — the example then propagates as a coordination
+default across the whole system, and the bias compounds with chain length.
+
+**Empirical anchor**
+
+First measured in the D.5 substrate-harm experiment
+(`research/sentinel-validation/phase-d/d5-plane-seat-meal-substrate-harm @ tag d5-v1.1, commit 817c68d9`).
+With schema example `"e.g. '14A' or '32H'"`, 19 of 22 reserve attempts
+targeted seat 14A across two model families (Mistral 3B Q4, IBM Granite 4 7B
+Q8). Changing the example to `"e.g. '21F' or '36C'"` migrated 28% of
+`check_availability` calls to 21F. Cross-model invariance with the original
+example, and bias migration after the example change, jointly support the
+schema-as-anchor mechanism over model-prior or substrate-property
+explanations. Full case study:
+[`../case-studies/chatty-card-a2a-substrate-harm/`](../case-studies/chatty-card-a2a-substrate-harm/).
